@@ -1,0 +1,15 @@
+<hello name="{{ name }}"></hello>
+<menu-component></menu-component>
+
+<p>Start editing to see some magic happen :)</p>
+
+<!--  interpolação  -->
+<my-button label="Botão"></my-button>
+<my-button label="{{ buttonSecond }}"></my-button>
+
+<!--  property binding  -->
+<my-button [label]="buttonLabel"></my-button>
+<my-button [label]="'Carrinho check'"></my-button>
+
+<!--  two way data binding  -->
+<app-entry-data></app-entry-data>

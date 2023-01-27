@@ -8,10 +8,19 @@
 <button (click)="removerApp()" (dblclick)="removeTudo()">Remover app-card</button>
 </div>
 
-<app-comp-atributos *ngIf="ComprasFinalizada"></app-comp-atributos>
+<app-comp-atributos *ngIf="ComprasFinalizada; else comprafinalizada"></app-comp-atributos>
 <br>
 <hr>
 <br>
-<button (click)="terminarCompra()">Terminar de Comprar</button>
+<button (click)="terminarCompra()">FINALIZAR COMPRA</button>
 
+<ng-template #comprafinalizada>
+<div *ngIf="isAliveImage">
+  <img src="/assets/Agradecendo-Cliente.png" alt="Desenho agradecendo a compra feita.">
+</div>
+<h3>Obrigado por ter visto meu código, agora eu o desafio a fazer um igual e me marcar no linkedin ou facebook. <br>
+ <a href="https://github.com/F3RN4ND0-3DU4RD0"> Meu GitHub</a>
+ <a href="https://www.linkedin.com/in/fernando-eduardo-60bab5241/"> Meu Linkedin</a>
+</h3>
+</ng-template>
 <router-outlet></router-outlet>

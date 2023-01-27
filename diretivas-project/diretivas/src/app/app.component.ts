@@ -10,6 +10,7 @@ export class AppComponent {
   isAliveCard = true;
   ComprasFinalizada: boolean = true;
   isDead:boolean = true;
+  isAliveImage: boolean = false;
 
   removerApp(){
     this.isAliveCard = false;
@@ -21,5 +22,6 @@ export class AppComponent {
 
   terminarCompra(){
     this.ComprasFinalizada = false;
+    this.isAliveImage = true;
   }
 }

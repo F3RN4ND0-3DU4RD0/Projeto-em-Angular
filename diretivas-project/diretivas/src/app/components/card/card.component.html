@@ -1,0 +1,44 @@
+<h1>Página com Angular</h1>
+<h1 *ngIf="PisAlive">Olá Mundo Angular!</h1>
+<button (click)="mostrarP()" (dblclick)="tirarP()" style="border: none;">Olá Mundo!</button>
+
+<button (click)="Accessuser()" style="background-color: green;">USER</button>
+<button (click)="Accessadmim()" style="background-color: yellow;">ADMIM</button>
+<button (click)="Accesssuperuser()" style="background-color: red;">SUPER_USER</button>
+
+<ul>
+  <li *ngFor=" let p of produtos; let i = index"
+   (click) = "removeForTouch(i)">
+    {{ i }} - {{ p }}
+  </li>
+</ul>
+
+<label for="novoProduto">Digite o novo produto: </label>
+<input type="text" [(ngModel)]="novoProduto">
+<button (click)="adicionar()">Adicionar</button>
+<button (click)="removerFinal()">Remover último item</button>
+
+
+<div [ngSwitch]="MenuType">
+  <div *ngSwitchCase="'user'" >
+    <ul>
+      USER
+      <li *ngFor="let opc of LayoutUser"> {{ opc}}</li>
+    </ul>
+  </div>
+
+  <div *ngSwitchCase="'admim'" >
+    <ul>
+      ADMIM
+      <li *ngFor="let opc of LayoutAdmim">{{ opc }}</li>
+    </ul>
+  </div>
+
+  <div *ngSwitchCase="'super_user'" >
+    <ul>
+      SUPER USER
+      <li *ngFor="let opc of LayoutSuper_User">{{ opc }}</li>
+    </ul>
+  </div>
+
+</div>

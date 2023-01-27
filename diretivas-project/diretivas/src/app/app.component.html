@@ -1,0 +1,28 @@
+<app-card *ngIf="isAliveCard; else apelido"></app-card>
+
+<ng-template #apelido>
+<p>Era pra ter alguma coisa aqui</p>
+</ng-template>
+
+<app-comp-atributos *ngIf="sumirComp"></app-comp-atributos>
+<br>
+<hr>
+<br>
+
+<ng-template [ngIf]="cachorro"  >
+  <div style="text-align: right;">
+    <img
+      src="./assets/carrinho de compras.png"
+      alt="Carrinho de compras"
+      width="150px"
+      height="100px"
+    /><br />
+    <a class="FinalizaCompra"
+       href="#"
+       style="color: blue"
+       (click)="finalizaCompra()"
+       >FINALIZAR COMPRA</a>
+  </div>
+</ng-template>
+
+<router-outlet></router-outlet>

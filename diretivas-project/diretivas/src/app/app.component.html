@@ -1,28 +1,17 @@
+<div *ngIf="isDead">
 <app-card *ngIf="isAliveCard; else apelido"></app-card>
 
 <ng-template #apelido>
-<p>Era pra ter alguma coisa aqui</p>
+<h2>APP-CARD FOI REMOVIDO</h2>
 </ng-template>
 
-<app-comp-atributos *ngIf="sumirComp"></app-comp-atributos>
+<button (click)="removerApp()" (dblclick)="removeTudo()">Remover app-card</button>
+</div>
+
+<app-comp-atributos *ngIf="ComprasFinalizada"></app-comp-atributos>
 <br>
 <hr>
 <br>
-
-<ng-template [ngIf]="cachorro"  >
-  <div style="text-align: right;">
-    <img
-      src="./assets/carrinho de compras.png"
-      alt="Carrinho de compras"
-      width="150px"
-      height="100px"
-    /><br />
-    <a class="FinalizaCompra"
-       href="#"
-       style="color: blue"
-       (click)="finalizaCompra()"
-       >FINALIZAR COMPRA</a>
-  </div>
-</ng-template>
+<button (click)="terminarCompra()">Terminar de Comprar</button>
 
 <router-outlet></router-outlet>

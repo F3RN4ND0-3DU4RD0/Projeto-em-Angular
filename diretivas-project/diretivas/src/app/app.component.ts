@@ -8,10 +8,18 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'diretivas';
   isAliveCard = true;
-  sumirComp: boolean = true;
-  cachorro: boolean = true;
+  ComprasFinalizada: boolean = true;
+  isDead:boolean = true;
 
-  finalizaCompra(){
-    this.sumirComp = false;
+  removerApp(){
+    this.isAliveCard = false;
+  }
+
+  removeTudo(){
+    this.isDead = false;
+  }
+
+  terminarCompra(){
+    this.ComprasFinalizada = false;
   }
 }

@@ -11,7 +11,8 @@ export class CompAtributosComponent implements OnDestroy {
   estilo: string = "disable";
   listaDeCompras: string[] = [];
   novoProduto: string = "";
-  @Input() IsAliveModel: boolean = false;
+  IsAliveModel: boolean = false;
+  CompraFinalizada: boolean = true;
 
 
   //Método para adicionar produtos na listaDeCompras
@@ -30,12 +31,17 @@ export class CompAtributosComponent implements OnDestroy {
     } else {
       this.IsAliveModel = false;
     }
+
   }
 
+  //Mostrando no console que este componente foi finalizado
   ngOnDestroy(){
     console.log("Componente Atributos está finalizado");
   }
 
+  finalizaCompra(){
+    this.CompraFinalizada = false;
+  }
 
 
 }

@@ -7,6 +7,20 @@
   ADICIONAR AO CARRINHO
 </button>
 
+<div *ngIf="IsAliveModel" style="text-align: right;">
+  <img
+    src="./assets/carrinho de compras.png"
+    alt="Carrinho de compras"
+    width="150px"
+    height="100px"
+  /><br />
+  <a class="FinalizaCompra"
+     href="#"
+     style="color: blue"
+     (click)="finalizaCompra()"
+     >FINALIZAR COMPRA</a>
+</div>
+
 
 
 

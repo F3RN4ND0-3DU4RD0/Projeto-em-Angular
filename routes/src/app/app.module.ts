@@ -1,21 +1,22 @@
-import { HomeModule } from './pages/home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponenteCompartilhadoComponent } from './shared/componente-compartilhado/componente-compartilhado.component';
-
+import { IndexModule } from './pages/index/index.module';
+import { PortfolioModule } from './pages/portfolio/portfolio.module';
+import { MenuComponent } from './shared/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponenteCompartilhadoComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    IndexModule,
+    PortfolioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

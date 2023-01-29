@@ -1,0 +1,41 @@
+.card {
+  border: 1px solid black;
+  width: 250px;
+  height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #232323;
+  border-radius: 10px;
+}
+
+.card__name {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card__name > h3 {
+  color: white;
+}
+
+.card__body {
+  background-color: #636363;
+  width: 90%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card__stats {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card__stats__type {
+padding: 5px;
+background-color: coral;
+border-radius: 4px;
+margin-right: 5px;
+}
